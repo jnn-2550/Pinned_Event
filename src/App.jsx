@@ -1,4 +1,4 @@
-import Event from "./EventPlanner";
+import EventPlanner from "./EventPlanner";
 export default function App() {
-  return <Event/>;
+  return <EventPlanner/>;
 }

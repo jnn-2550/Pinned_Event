@@ -1,18 +1,25 @@
-*{
-  padding: 0;
-  margin: 0;
+.event-planner-container {
   box-sizing: border-box;
-}
-
-.container {
   max-width: 100vw;
   height: auto;
   margin: 0 auto;
-  padding: 30px;
+  padding: 20px;
   text-align: center;
-  background: linear-gradient(135deg, #fee6f0 25%, transparent 25%) -50px 0, linear-gradient(225deg, #fee6f0 25%, transparent 25%) -50px 0, linear-gradient(315deg, #fee6f0 25%, transparent 25%), linear-gradient(45deg, #fee6f0 25%, transparent 25%);
+  background:
+    linear-gradient(135deg,
+      #fee6f0 25%,
+      transparent 25%) -50px 0,
+    linear-gradient(225deg,
+      #fee6f0 25%,
+      transparent 25%) -50px 0,
+    linear-gradient(315deg,
+      #fee6f0 25%,
+      transparent 25%),
+    linear-gradient(45deg,
+      #fee6f0 25%,
+      transparent 25%);
+
   background-size: 100px 100px;
-  /* Adjust the size based on the pattern */
 }
 
 header h1 {
@@ -25,35 +32,71 @@ header h1 {
   margin-bottom: 20px;
 }
 
-.start_btn {
+.get-started-button {
   background-color: #f85199;
   color: #fff;
   border: none;
-  padding: 0.5rem 1.5rem;
-  font-size: 1rem;
   border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.start_btn:hover {
+.get-started-button:hover {
   background-color: #d32b74;
 }
 
-.features,.testimonials,.contact,
+.features,
+.testimonials,
+.contact,
 .events_categories {
   margin-top: 50px;
 }
 
-.features h2,.testimonials h2,
+.features h2,
+.testimonials h2,
 .contact h2 {
   font-size: 2rem;
   margin-bottom: 20px;
 }
 
+.events_categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.events_categories .event-category {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 270px;
+  max-width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.events_categories .event-category h2 {
+  background-color: #e46a9d;
+  padding: 5px 10px;
+  color: white;
+}
+
+.events_categories .event-category ul {
+  list-style: none;
+  padding: 0 12px 12px;
+}
+
+.events_categories .event-category li {
+  font-size: 1.1rem;
+  line-height: 24px;
+}
+
 .features ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
 .features ul li {
@@ -76,65 +119,79 @@ header h1 {
 .contact form {
   display: flex;
   flex-direction: column;
+  /* gap: 0;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto; */
 }
-  .contact input,.contact textarea {
-    margin-bottom: 15px;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
-  }
-  
-  .contact textarea {
-    height: 150px;
-  }
-  
-  .submit_btn {
-    background-color: #f85199;
-    color: #fff;
-    border: none;
-    padding: 0.5rem 1.5rem;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .submit_btn:hover {
-    background-color: #d32b74;
-  }
-  
-  footer {
-    margin-top: 50px;
-    font-size: 0.9rem;
-  }
-  
-  .events_categories h1 {
-    background-color: gray;
-    text-align: center;
-  }
-  
+
+.contact input,
+.contact textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.contact textarea {
+  height: 150px;
+}
+
+.submit-button {
+  background-color: #f85199;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #d32b74;
+}
+
+footer {
+  margin-top: 50px;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+footer p {
+  margin: 8px 0;
+}
+
+.events_categories .event-category li {
+  font-size: 1.1rem;
+  line-height: 24px;
+}
+
+.event-planner-container {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.events_categories {
+  flex-wrap: wrap;
+}
+
+.events_categories .event-category {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
   .events_categories {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
-  
-  .events_categories ul {
-    background-color: rgba(0, 0, 0, 0.2);
-    width: 270px;
-    /* padding: 0 10px; */
+
+  .events_categories .event-category {
+    width: min(100%, 350px);
   }
-  
-  .events_categories ul h2 {
-    background-color: #e46a9d;
-    text-align: center;
-    padding: 5px 10px;
-    color: white;
+
+  header h1 {
+    font-size: 1.8rem;
   }
-  
-  .events_categories ul li {
-    list-style-type: none;
-    font-size: 1.1rem;
-    line-height: 24px;
-  }
+}
